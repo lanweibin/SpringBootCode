@@ -18,4 +18,8 @@ public class Myconfig {
         System.out.println("执行helloSerive方法");
         return  new HelloService();
     }
+
+    public static void main(String[] args) {
+        System.out.println("config branch");
+    }
 }
