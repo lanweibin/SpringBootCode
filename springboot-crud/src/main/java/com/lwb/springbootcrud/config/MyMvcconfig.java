@@ -1,7 +1,11 @@
 package com.lwb.springbootcrud.config;
 
+import com.lwb.springbootcrud.component.MyLocaleResolver;
+import org.apache.tomcat.util.descriptor.LocalResolver;
+import org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -31,5 +35,16 @@ public class MyMvcconfig extends WebMvcConfigurerAdapter {
             }
         };
         return webMvcConfigurerAdapter;
+    }
+
+//    @Bean
+//    public LocaleResolver localResolver(){
+//        return new  MyLocaleResolver();
+//    }
+
+    @Bean
+    public LocaleResolver localeResolver(){
+
+        return new MyLocaleResolver();
     }
 }
