@@ -3,7 +3,7 @@ package com.lwb.springbootcrud.config;
 import com.lwb.springbootcrud.component.LoginHandlerInterceptor;
 import com.lwb.springbootcrud.component.MyLocaleResolver;
 import org.apache.tomcat.util.descriptor.LocalResolver;
-import org.springframework.boot.autoconfigure.web.servlet.WebMvcProperties;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
