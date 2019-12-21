@@ -27,7 +27,7 @@ public class EmployeeController {
         Collection<Employee> all = employeeDao.getAll();
 
         model.addAttribute("emps", all);
-        return "/emp/list";
+        return "emp/list";
     }
 
 }
