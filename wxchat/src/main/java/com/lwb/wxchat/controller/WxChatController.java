@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WxChatController {
 
+    public static void main(String[] args) {
+        System.out.println();
+    }
     @GetMapping("/wx")
     public void access(){
 
