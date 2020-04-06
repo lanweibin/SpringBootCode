@@ -45,8 +45,19 @@ public class WxChatController {
 
     @PostMapping("/wx")
     public void event(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        Map<String, String> map =  WxService.parseRequest(request.getInputStream());
-        System.out.println(map);
+        request.setCharacterEncoding("utf-8");
+        response.setCharacterEncoding("utf-8");
+        Map<String, String> requestMap =  WxService.parseRequest(request.getInputStream());
+
+        //准备回复的数据包
+        String respXml =  WxService.getRespone(requestMap);
+        System.out.println(respXml);
+
+        PrintWriter writer = response.getWriter();
+        writer.write(respXml);
+        writer.flush();
+        writer.close();
+
     }
 
 
