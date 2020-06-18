@@ -27,7 +27,7 @@ public class MyServerConfig {
         return new EmbeddedServletContainerCustomizer() {
             @Override
             public void customize(ConfigurableEmbeddedServletContainer configurableEmbeddedServletContainer) {
-                configurableEmbeddedServletContainer.setPort(8082);
+                configurableEmbeddedServletContainer.setPort(8080);
             }
         };
     }
